@@ -1,0 +1,103 @@
+$anime-time: 0.8s;
+$main-font: 60px;
+$main-font-weight: 600;
+$font-family: 'Fjalla One', sans-serif;
+
+html, body {
+  background: black;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+#web {
+  position: relative;
+  width: 100%;
+  height: 100%; 
+}
+
+.entry {
+  position: relative;
+  top: 30%;
+  left: calc(40% - 300px);
+  width: 600px;
+  height: 150px;
+  text-align: center;
+    
+  h1 {
+    font-family: $font-family;
+    color: white;
+    font-size: $main-font;
+    font-weight: $main-font-weight;
+  }
+}
+
+.send {
+  position: relative;
+  top: 30%;
+  text-align: center;
+  h1 {
+    font-family: $font-family;
+    color: white;
+    font-size: $main-font;
+    font-weight: $main-font-weight;
+  }
+}
+
+.enter {
+  position: absolute;
+  top: 30%;
+  left: calc(40% + 300px);
+  width: 200px;
+  height: 150px;
+  input {
+    width: 200%;
+    height: 70px;
+    color: yellowgreen;
+    font-family: $font-family;
+    font-size: $main-font;
+    font-weight: $main-font-weight;
+    border: none;
+    background: black;
+  }
+  
+  input:focus {
+    animation: none;
+  }
+}
+
+.blink {
+  animation: blink $anime-time linear infinite;
+}
+
+.send-button {
+  position: absolute;
+  bottom: 30%;
+  right: 30%;
+  text-align: center;
+  button {
+    font-weight: $main-font-weight;
+    font-size: $main-font;
+    font-family: $font-family;
+    color: white;
+    border-radius: 10%;
+    background: black;
+    border: 2px solid yellowgreen;
+  }
+  button:hover {
+    background: yellowgreen;
+  }
+  button:focus {
+    background: green;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-bottom: 2px solid white;
+  }
+}

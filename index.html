@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Siuntimas į Peru arba kinus</title>
+
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Gruppo|Pacifico" rel="stylesheet">
+      <script src="https://unpkg.com/vue"></script>
+
+</head>
+
+<body>
+
+
+<div id="web" >
+  <div class="image hidden" v-bind:class="{ display: isName }">
+    <img src="http://awallpapersimages.com/wp-content/uploads/2016/07/Beautiful-Mountain-Landscape-Wallpaper.jpg" alt="Swiss mountains">
+  </div>
+
+  <div v-show="!isName" class="entry" v-cloak>
+    <h1>{{ entry }}</h1>
+  </div>
+
+  <div v-show="!isName" class="enter" v-cloak>
+    <div class="width-200">
+      <input
+             class="blink"
+             v-model="name"
+      />
+    </div>
+  </div>
+
+  <div v-show="isName" class="send" v-cloak>
+    <h1>{{ name }}</h1>
+  </div>
+
+  <div v-show="!isName" class="send-button" v-cloak>
+    <button @click="sendPerson()">{{ send }}</button>
+  </div>
+</div>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
